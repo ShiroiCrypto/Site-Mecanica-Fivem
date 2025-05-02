@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mecânica Oceania Customs</title>
+  <link rel="stylesheet" href="style/main.css"/>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo Oceania Customs" class="logo"/>
+    <h1>Mecânica Oceania Customs</h1>
+  </header>
+
+  <main>
+    <section class="calculadora">
+      <h2 style="text-align: center; margin-bottom: 20px;">Serviços</h2> <!-- Centralizei o título "Serviços" e ajustei o espaçamento -->
+
+      <div class="grid">
+        <!-- FULL TUNING -->
+        <div class="categoria">
+          <h3>Full Tuning</h3>
+          <div class="opcoes">
+            <label><input type="checkbox" data-valor="150000"/> Carro – Sem Blindagem (R$ 150.000)</label>
+            <label><input type="checkbox" data-valor="200000"/> Carro – Com Blindagem (R$ 200.000)</label>
+            <label><input type="checkbox" data-valor="120000"/> Moto – Sem Blindagem (R$ 120.000)</label>
+            <label><input type="checkbox" data-valor="170000"/> Moto – Com Blindagem (R$ 170.000)</label>
+          </div>
+        </div>
+
+        <!-- MODIFICAÇÕES MECÂNICAS -->
+        <div class="categoria">
+          <h3>Modificações Mecânicas</h3>
+          <div class="opcoes">
+            <label><input type="checkbox" data-valor="30000"/> Motor (R$ 30.000)</label>
+            <label><input type="checkbox" data-valor="30000"/> Freio (R$ 30.000)</label>
+            <label><input type="checkbox" data-valor="30000"/> Transmissão (R$ 30.000)</label>
+            <label><input type="checkbox" data-valor="30000"/> Suspensão (R$ 30.000)</label>
+            <label><input type="checkbox" data-valor="30000"/> Turbo (R$ 30.000)</label>
+          </div>
+        </div>
+
+        <!-- LATARIA & INTERIOR -->
+        <div class="categoria">
+          <h3>Lataria &amp; Interno</h3>
+          <div class="opcoes">
+            <label><input type="checkbox" data-valor="50000"/> Blindagem (R$ 50.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Volante (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Câmbio (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Placas Internas (R$ 5.000)</label>
+          </div>
+        </div>
+
+        <!-- EXTERNAS -->
+        <div class="categoria">
+          <h3>Modificações Externas</h3>
+          <div class="opcoes">
+            <label><input type="checkbox" data-valor="5000"/> Aerofólio (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Parachoque (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Escapamento (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Gaiola (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Grelha (R$ 5.000)</label>
+          </div>
+        </div>
+
+        <!-- RODAS -->
+        <div class="categoria">
+          <h3>Rodas</h3>
+          <div class="opcoes">
+            <label><input type="checkbox" data-valor="5000"/> Padrão (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Drift (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Custom (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Cor da Roda (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Blindagem Roda (R$ 5.000)</label>
+          </div>
+        </div>
+
+        <!-- PINTURA & NEON -->
+        <div class="categoria">
+          <h3>Pintura &amp; Neon</h3>
+          <div class="opcoes">
+            <label><input type="checkbox" data-valor="5000"/> Pintura (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="8000"/> Metálica (R$ 8.000)</label>
+            <label><input type="checkbox" data-valor="8000"/> Perolado (R$ 8.000)</label>
+            <label><input type="checkbox" data-valor="8000"/> Cromado (R$ 8.000)</label>
+            <label><input type="checkbox" data-valor="8000"/> Fosco (R$ 8.000)</label>
+            <label><input type="checkbox" data-valor="8000"/> RGB (R$ 8.000)</label>
+            <label><input type="checkbox" data-valor="5000"/> Neon (R$ 5.000)</label>
+            <label><input type="checkbox" data-valor="15000"/> Farol Xenon (R$ 15.000)</label>
+          </div>
+        </div>
+
+        <!-- REPAROS -->
+        <div class="categoria">
+          <h3>Reparos</h3>
+          <div class="opcoes">
+            <label><input type="checkbox" data-valor="4500"/> Kit Reparo (R$ 4.500)</label>
+            <label><input type="checkbox" data-valor="4000"/> Reparo na MEC (R$ 4.000)</label>
+            <label><input type="checkbox" data-valor="4000"/> Reparo Fora da MEC (R$ 4.000 + R$ 1.000/km)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="botoes">
+        <button onclick="calcularValor()">Calcular Valor</button>
+        <button onclick="limparFormulario()">Limpar Tudo</button>
+      </div>        
+
+      <div id="resultado">
+        <p>Total: R$ <span id="total">0,00</span></p>
+        <p><strong>Com 20% (parceria): R$ <span id="desconto20">0,00</span></strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Oceania Customs – Todos os direitos reservados.</p>
+    <p>Desenvolvido por <a href="https://github.com/ShiroiCrypto/Site-Mecanica-Fivem" target="_blank">ShiroiCrypto</a></p>
+  </footer>
+
+  <script src="script/main.js"></script>
+</body>
+</html>

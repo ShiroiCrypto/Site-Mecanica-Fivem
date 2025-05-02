@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0a0f1a;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #121b2a;
+  border-bottom: 2px solid #1e90ff;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+main {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+/* Ajuste no espaçamento e alinhamento das categorias */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Aumentei o espaçamento entre as categorias */
+  justify-content: center; /* Centraliza as categorias na grade */
+}
+
+.categoria {
+  flex: 1 1 calc(33.333% - 40px); /* Ajusta o tamanho das categorias para caberem em 3 por linha com espaçamento */
+  min-width: 250px; /* Largura mínima para evitar invasão */
+  max-width: 300px; /* Largura máxima para manter consistência */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento interno da categoria */
+  align-items: center;
+  background: #1c2639; /* Adicionei um fundo para destacar as categorias */
+  padding: 15px; /* Espaçamento interno para evitar que o conteúdo encoste nas bordas */
+  border-radius: 8px; /* Bordas arredondadas para melhor estética */
+  border: 1px solid #1e90ff; /* Adicionei uma borda para delimitar as categorias */
+}
+
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.opcoes label {
+  flex: 1 1 calc(50% - 10px); /* Ajusta o tamanho dos labels para caberem 2 por linha */
+  max-width: 150px; /* Limita a largura máxima para evitar desalinhamento */
+  text-align: center;
+}
+
+.opcoes input[type="checkbox"] {
+  margin-right: 5px;
+  accent-color: #1e90ff;
+}
+
+/* Botão */
+button {
+  background-color: #1e90ff;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1672cc;
+}
+
+#resultado {
+  text-align: center; /* Centraliza o texto dos valores totais */
+  margin-top: 20px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #121b2a;
+  border-top: 2px solid #1e90ff }
+  
+  .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .categoria {
+    flex: 1 1 200px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Centraliza os textos e caixas de diálogo */
+  }
+  
+  .categoria h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px; /* Ajusta o tamanho da fonte para melhor visibilidade */
+  }
